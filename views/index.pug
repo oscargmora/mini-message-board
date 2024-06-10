@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1= title
+  - for (let i = 0; i < messages.length; i++)
+    p= messages[i].user
+      li= messages[i].text
+      li= messages[i].added
+  a(class='button', href='/new') Write a Message
